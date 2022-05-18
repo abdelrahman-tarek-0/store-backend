@@ -46,15 +46,25 @@ npm run jsStart
 
 -  you need to create .env file and put this inside it
     PORT = 3000
+    
     ENV = dev
+    
     POSTGRES_HOST = localhost
+    
     POSTGRES_PORT = 5432
+    
     POSTGRES_DB = store_dev
+    
     POSTGRES_DB_test = store_test
+    
     POSTGRES_USER = postgres
+    
     POSTGRES_PASSWORD = 123123pass
+    
     BCRYPT_PASS = ThisIsTotalyNotAPassWord
+    
     TOKEN_PASS = ThisIsTotalyNotAPassWord
+    
     SALT_ROUNDS = 11
 
 ## ports server and postgres
