@@ -6,7 +6,7 @@ These are the notes from a meeting with the frontend developer that describe wha
 
 ## API Endpoints
 
-#### Products
+### Products
 
 _Index_
 
@@ -44,7 +44,7 @@ POST localhost:3000/api/products/
 -   [OPTIONAL] Top 5 most popular products
 -   [OPTIONAL] Products by category (args: product category)
 
-#### Users
+### Users
 
 _Index [token required]_
 
@@ -98,7 +98,7 @@ POST localhost:3000/api/users/auth
 | `user_name` | `string` | `unique user name for each user`  |
 | `password`  | `string` | `password name for the user`      |
 
-#### Orders
+### Orders
 
 _Current Order by user (args: user id)[token required]_
 
@@ -177,21 +177,21 @@ GET localhost:3000/api/orders/check-orders/:id
 
 ## Data Shapes
 
-#### Product
+### Product
 
 -   id `NUMBER`
 -   name `STRING`
 -   price `NUMBER`
 -   [OPTIONAL] category
 
-#### User
+### User
 
 -   id `NUMBER`
 -   firstName `STRING`
 -   lastName `STRING`
 -   password `STRING`
 
-#### Orders
+### Orders
 
 -   id `NUMBER`
 -   id of each product in the order `NUMBER`
