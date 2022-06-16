@@ -12,13 +12,13 @@ export const create = async (
     next: express.NextFunction,
 ) => {
     try {
-        const user = await OrderModel.create({
+        const order = await OrderModel.create({
             status: req.body.status,
             user_id: parseInt(req.params.id, 10),
         } as order);
         res.json({
             status: 'order created',
-            data: user,
+            data: order,
         });
     } catch (error) {
         next(error);
@@ -32,14 +32,14 @@ export const addProduct = async (
     next: express.NextFunction,
 ) => {
     try {
-        const user = await OrderModel.addProduct({
+        const product = await OrderModel.addProduct({
             order_id: parseInt(req.params.id, 10),
             product_id: parseInt(req.body.product_id, 10),
             quantity: parseInt(req.body.quantity, 10),
         } as order_product);
         res.json({
             status: 'product added to the order',
-            data: user,
+            data: product,
         });
     } catch (error) {
         next(error);
@@ -52,12 +52,12 @@ export const productsInOrder = async (
     next: express.NextFunction,
 ) => {
     try {
-        const user = await OrderModel.productsInOrder({
+        const productsInOrder = await OrderModel.productsInOrder({
             order_id: parseInt(req.params.id, 10),
         } as order_product);
         res.json({
             status: 'get all product in the order',
-            data: user,
+            data: productsInOrder,
         });
     } catch (error) {
         next(error);
@@ -70,12 +70,12 @@ export const ordersUserMade = async (
     next: express.NextFunction,
 ) => {
     try {
-        const user = await OrderModel.ordersUserMade({
+        const ordersUserMade = await OrderModel.ordersUserMade({
             user_id: parseInt(req.params.id, 10),
         } as order);
         res.json({
             status: 'get all orders the user made is done',
-            data: user,
+            data: ordersUserMade,
         });
     } catch (error) {
         next(error);
